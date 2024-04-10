@@ -28,11 +28,18 @@ function onYouTubeIframeAPIReady() {
 function onPlayerReady(event) {
     player.setPlaybackRate(2);
     player.mute();
-    event.target.playVideo();
-    player.seekTo(90);
+	
+  var playButton = document.getElementById("btnplay");
+  playButton.addEventListener("click", function () {
+    player.playVideo();
+	player.seekTo(90);
+  });
 }
-
+	
 function onAudioPlayerReady(event) {
-    event.target.playVideo();
-    audioplayer.seekTo(50);
+	var playButton = document.getElementById("btnplay");
+	playButton.addEventListener("click", function () {
+    audioplayer.playVideo();
+	audioplayer.seekTo(50);
+  });
 }
