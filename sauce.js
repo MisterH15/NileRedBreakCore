@@ -33,6 +33,7 @@ function onPlayerReady(event) {
   playButton.addEventListener("click", function () {
     player.playVideo();
 	player.seekTo(90);
+	document.querySelector('#player').style.display = 'inline';
   });
 }
 	
